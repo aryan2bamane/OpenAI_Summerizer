@@ -92,6 +92,12 @@ const Demo = () => {
                         <p>↵</p>
                     </button>
                 </form>
+                {/* Browse History */}
+                <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
+                    {allArticles.reverse().map((item, index) => (
+                        
+                    ))}
+                </div>
             </div>
 
 
