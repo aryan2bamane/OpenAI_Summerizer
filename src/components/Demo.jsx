@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+import { useLazyGetSummaryQuery } from "../services/article";
 
 const Demo = () => {
     const [article, setArticle] = useState({
@@ -7,7 +8,21 @@ const Demo = () => {
         summary: "",
     });
 
-   
+    const [allArticles, setAllArticles] = useState([]);
+    const [copied, setCopied] = useState("");
+
+    const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+    // Load data from localStorage on mount
+    useEffect(() => {
+        const articlesFromLocalStorage = JSON.parse(
+            localStorage.getItem("articles")
+        );
+
+        if (articlesFromLocalStorage) {
+            setAllArticles(articlesFromLocalStorage);
+        }
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
