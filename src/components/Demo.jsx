@@ -1,11 +1,36 @@
-import React from 'react'
+import { useState } from "react";
+
 
 const Demo = () => {
-    return (
-        <div>
-            Demo
-        </div>
-    )
-}
+    const [article, setArticle] = useState({
+        url: "",
+        summary: "",
+    });
 
-export default Demo
+   
+
+   
+
+        
+
+
+
+
+    const handleCopy = (copyUrl) => {
+        setCopied(copyUrl);
+        navigator.clipboard.writeText(copyUrl);
+        setTimeout(() => setCopied(false), 3000);
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.keyCode === 13) {
+            handleSubmit(e);
+        }
+    };
+
+    return (
+        
+    );
+};
+
+export default Demo;
