@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { copy, linkIcon, loader, tick } from "../assets";
 import { useLazyGetSummaryQuery } from "../services/article";
 
 const Demo = () => {
@@ -92,6 +93,7 @@ const Demo = () => {
                         <p>↵</p>
                     </button>
                 </form>
+
                 {/* Browse History */}
                 <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
                     {allArticles.reverse().map((item, index) => (
