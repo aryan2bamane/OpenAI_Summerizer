@@ -115,7 +115,10 @@ const Demo = () => {
                 </div>
             </div>
 
-
+            {/* Display Result */}
+            <div className='my-10 max-w-full flex justify-center items-center'>
+                
+            </div>
         </section>
     );
 };
