@@ -44,7 +44,7 @@ Welcome to the AI Web Article Summarizer! This web application leverages the pow
      ```
 5. **Start the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
 6. **Open your browser and navigate to:**
    ```
